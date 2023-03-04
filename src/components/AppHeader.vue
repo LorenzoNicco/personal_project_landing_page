@@ -1,6 +1,11 @@
 <script>
+    import JumboSection from './JumboSection.vue';
+    
     export default {
         name: "AppHeader",
+        components: {
+            JumboSection
+        },
         data () {
             return {
                 headerMenu: [
@@ -37,7 +42,7 @@
 
 <template>
     <header class="my-bg-dark">
-        <div class="container-xl">
+        <div class="container-xl  pb-5">
             <div class="row pt-3">
                 <div class="col">
                     <img src="../assets/corporate-landing/images/white-logo-2.png" alt="">
@@ -52,6 +57,10 @@
 
                     <button class="my-button my-button-color-blue mt-2">Sign In</button>
                 </nav>
+            </div>
+
+            <div class="row">
+                <JumboSection class="col" />
             </div>
         </div>
     </header>
