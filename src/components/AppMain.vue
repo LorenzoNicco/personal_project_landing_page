@@ -1,6 +1,11 @@
 <script>
     export default {
-        name: "AppMain"
+        name: "AppMain",
+        data() {
+            return {
+                version: 'main'
+            }
+        }
 
     }
 </script>

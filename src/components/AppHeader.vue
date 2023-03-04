@@ -8,6 +8,7 @@
         },
         data () {
             return {
+                version: 'header',
                 headerMenu: [
                     {
                         menuVoice: 'Home',
@@ -59,8 +60,8 @@
                 </nav>
             </div>
 
-            <div class="row">
-                <JumboSection class="col" />
+            <div class="row pb-5">
+                <JumboSection class="col" :version="version"/>
             </div>
         </div>
     </header>
