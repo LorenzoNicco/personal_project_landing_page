@@ -77,7 +77,7 @@
             list-style: none;
 
             .active {
-                color: #f9636b
+                color: $red-text;
             }
 
         }
