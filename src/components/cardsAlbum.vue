@@ -39,14 +39,14 @@ export default {
 
 <template>
     <!-- sezione what we do -------------------------------------------------------------------------------->
-    <div v-if="sectionNumber == 1" class="container-xl">
+    <div v-if="sectionNumber == 1" class="container-xl my-card-container">
         <div class="row">
             <div class="col-3" v-for="card in cardsContent.whatWeDo">
-                <div>
+                <div class="my-pic-container mb-5">
                     <img :src="card.pic" alt="">
                 </div>
 
-                <h4>{{ card.title }}</h4>
+                <h4 class="mb-4 fw-bold">{{ card.title }}</h4>
 
                 <p>{{ card.paragraphe }}</p>
             </div>
@@ -55,5 +55,22 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+// sezione what we do-------------------------------------------------------------------------------
+    .my-card-container {
+        margin-top: 8rem;
+
+        .my-pic-container {
+            height: 8rem;
     
+            img {
+                height: 100%;
+            }
+        }
+
+        p {
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
 </style>

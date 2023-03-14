@@ -59,7 +59,7 @@
 
 <template>
     <!-- sezione what we do ---------------------------------------------------------------------->
-    <section :class="{'text-center' : sectionHeaders[0].isCaption == true}">
+    <section class="py-5" :class="{'text-center' : sectionHeaders[0].isCaption == true}">
         <h6 class="my-red-text">{{ sectionHeaders[0].secondaryTitle }}</h6>
 
         <h2 class="my-3"><span class="fw-bold">{{ sectionHeaders[0].mainTitleFirstWord }}</span> <span class="fw-normal">{{ sectionHeaders[0].mainTitleRest }}</span></h2>
@@ -67,11 +67,26 @@
         <p v-if="sectionHeaders[0].isCaption == true">{{ sectionHeaders[0].caption }}</p>
 
         <cardsAlbum :sectionNumber='sectionHeaders[0].sectionNumber'/>
+
+        <button class="my-button my-button-color-red my-margin-top">View All Services</button>
     </section>
 </template>
 
 <style lang="scss" scoped>
+// utilities--------------------------------------------------------------------------------------------------
+    .my-button {
+        @include buttonShape;
+    }
+
+    .my-button-color-red {
+        background-color: $button-color-red;
+        box-shadow: $button-shadow-red;
+    }
     .my-red-text {
         color: $red-text;
+    }
+
+    .my-margin-top {
+        margin-top: 10rem;
     }
 </style>
