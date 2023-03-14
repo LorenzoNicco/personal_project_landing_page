@@ -6,22 +6,22 @@ export default {
             cardsContent: {
                 whatWeDo: [
                     {
-                        pic: "../assets/corporate-landing/images/Group-247.png",
+                        pic: "./src/assets/corporate-landing/images/Group-247.png",
                         title: "Data Analysis",
                         paragraphe: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper"
                     },
                     {
-                        pic: "../assets/corporate-landing/images/Group-567.png",
+                        pic: "./src/assets/corporate-landing/images/Group-567.png",
                         title: "SEO Optimization",
                         paragraphe: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper"
                     },
                     {
-                        pic: "../assets/corporate-landing/images/Group-538.png",
+                        pic: "./src/assets/corporate-landing/images/Group-538.png",
                         title: "Security Data",
                         paragraphe: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper"
                     },
                     {
-                        pic: "../assets/corporate-landing/images/Group-566.png",
+                        pic: "./src/assets/corporate-landing/images/Group-566.png",
                         title: "Branding Strategy",
                         paragraphe: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper"
                     }
@@ -54,4 +54,6 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+    
+</style>
