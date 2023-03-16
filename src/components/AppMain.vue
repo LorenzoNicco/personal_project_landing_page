@@ -1,10 +1,12 @@
 <script>
     import cardsAlbum from "./cardsAlbum.vue";
+    import JumboSection from "./JumboSection.vue";
 
     export default {
         name: "AppMain",
         components: {
-            cardsAlbum
+            cardsAlbum,
+            JumboSection
         },
         data() {
             return {
@@ -72,6 +74,13 @@
             <button class="my-button my-button-color-red my-margin-top">View All Services</button>
         </div>
     </section>
+
+    <!-- jumbosection ----------------------------------------------------------------------------->
+    <div class="my-bg-dark">
+        <div class="container-xl">
+            <JumboSection :version="version"/>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -98,6 +107,11 @@
 
     .my-red-shadow {
         box-shadow: 0px 0px 15px 5px rgba(255,0,0,0.25);
+    }
+
+    .my-bg-dark {
+        background: $dark-bg-gradient;
+        padding: 10rem 0;
     }
 
 </style>

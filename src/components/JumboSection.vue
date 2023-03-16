@@ -8,9 +8,9 @@ export default {
 </script>
 
 <template>
-    <section class="row py-4">
-        <div class="col-5 d-flex flex-column justify-content-center" :class="{'row-reverse' : version == 'main'}">
-            <h1 class="text-white" v-if="version == 'header'">
+    <section class="row" :class="{'flex-row-reverse' : version == 'main'}">
+        <div class="col-5 d-flex flex-column justify-content-center">
+            <h1 class="text-white mb-0" v-if="version == 'header'">
                 <span>Business Planning</span><br>
                 <span class="fw-light">Digital Technology</span><br>
                 <span>Modern Solution!</span>
@@ -18,7 +18,7 @@ export default {
             <div v-else-if="version == 'main'">
                 <h4 class="text-white">Start Your Project</h4>
 
-                <h2 class="text-white my-5">
+                <h2 class="text-white mt-3 mb-0 fs-1">
                     <span>GROW YOUR BUSINESS</span><br>
                     <span class="fw-light">WITH OUR STRATEGY</span>
                 </h2>
@@ -34,8 +34,12 @@ export default {
             </div>
         </div>
 
-        <div class="col-7">
-            <img src="../assets/corporate-landing/images/header.png" alt="img not found" class="w-100">
+        <div class="col-7 d-flex justify-content-start align-items-center">
+            <img v-if="version == 'header'" src="../assets/corporate-landing/images/header.png" alt="img not found" class="w-100">
+            <div  v-else-if="version == 'main'" class="my-img-container-jumbo">
+                <img src="../assets/corporate-landing/images/men-data.png" alt="img not found" class="w-100 position-absolute my-z-index-20">
+                <img src="../assets/corporate-landing/images/nemoodar.png" alt="img not found" class="w-100 my-translate">
+            </div>
         </div>
     </section>
 </template>
@@ -57,6 +61,19 @@ export default {
     .my-button-color-blue {
         background-color: $button-color-blue;
         box-shadow: $button-shadow-blue;
+    }
+
+    .my-translate {
+        transform: translateY(-20%);
+    }
+
+    .my-z-index-20 {
+        z-index: 20;
+    }
+
+    .my-img-container-jumbo {
+        width: 60%;
+        position: relative;
     }
 
 </style>
