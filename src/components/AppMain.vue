@@ -68,7 +68,9 @@
 
         <cardsAlbum :sectionNumber='sectionHeaders[0].sectionNumber'/>
 
-        <button class="my-button my-button-color-red my-margin-top">View All Services</button>
+        <div class="button-container my-red-shadow">
+            <button class="my-button my-button-color-red my-margin-top">View All Services</button>
+        </div>
     </section>
 </template>
 
@@ -86,7 +88,16 @@
         color: $red-text;
     }
 
-    .my-margin-top {
+    .button-container {
+        width: fit-content;
+        height: 40px;
+        border-radius: 30px;
+        margin: 0 auto;
         margin-top: 10rem;
     }
+
+    .my-red-shadow {
+        box-shadow: 0px 0px 15px 5px rgba(255,0,0,0.25);
+    }
+
 </style>
